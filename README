@@ -1,0 +1,32 @@
+PSU Note Application
+====================
+
+A simple note-taking web application built with Python, Flask, and PostgreSQL.
+
+Requirements
+------------
+- Python 3.14+
+- PostgreSQL (running locally on port 5432)
+
+Installation
+------------
+1. Create a virtual environment and activate it:
+   python3 -m venv env
+   source env/bin/activate
+
+2. Install dependencies:
+   pip install -r requirements.txt
+
+Configuration
+-------------
+Ensure that your PostgreSQL database is running and accessible with the following credentials:
+User: coe
+Password: CoEpasswd
+Database: coedb
+
+Running the App
+---------------
+Start the development server:
+   python psunote/noteapp.py
+
+Then open your web browser and go to http://127.0.0.1:5000.
