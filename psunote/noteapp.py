@@ -34,8 +34,7 @@ def notes_create():
             "notes-create.html",
             form=form,
         )
-    note = models.Note()
-    form.populate_obj(note)
+    note = models.Note(title=form.title.data, description=form.description.data)
     note.tags = []
 
     db = models.db
@@ -94,7 +93,8 @@ def notes_edit(note_id):
     if not form.validate_on_submit():
         return flask.render_template("notes-edit.html", form=form, note_id=note_id)
         
-    form.populate_obj(note)
+    note.title = form.title.data
+    note.description = form.description.data
     note.tags = []
 
     for tag_name in form.tags.data:
